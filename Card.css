@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --bgcolor: rgb(3, 3, 7);
+    --bg2:  white;
+    --icon: #FAB005;
+    --shado: #152A48 ;
+    --shado2: #f8ba28 ;
+    --height: 100vh;}
+body{
+    background-color: var(--bgcolor);
+    font-size: large;
+    font-family: Helvetica, Aria, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--height);
+    
+}
+h3 > i  {
+    color: var(--icon);
+}
+
+i ,  .ad{
+    color: var(--shado);
+}
+.desc {
+    color: #777;
+    font-size: 14px;
+}
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+}
+div.card{
+    background-color: var(--bg2);
+    padding: 20px ;
+    width: 800px;
+    border-radius: 10px;
+    text-align: center;
+    width: min(860px, 95%); 
+    min-height: 400px;       
+}
+.card2{
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+    margin-top: 30px;
+    gap: 25px;
+    align-items: stretch;
+    
+}
+.card2 > div > *{
+    margin-bottom: 20px;
+}
+.one , .two , .three {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 👈 pushes button down */
+    height: 100%;
+    border: solid  2px  #ddd; 
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    height: 100%;   
+     min-height: 380px;
+}
+button{
+    background-color: var(--icon);
+    padding: 10px;
+    color: var(--shado);
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    box-shadow: 4px 4px 0px black;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+button:hover{
+    background-color: var(--shado2) ;
+
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+.one:hover, .two:hover, .three:hover {
+    border-color: var(--icon);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+@media (max-width: 900px) {
+    .card2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    div.card {
+        width: 95%;
+        padding: 25px;
+    }
+}
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .card2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    div.card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .one, .two, .three {
+        min-height: auto;
+    }
+}
+@media (hover: hover) {
+    .one:hover, .two:hover, .three:hover {
+        border-color: var(--icon);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+}
