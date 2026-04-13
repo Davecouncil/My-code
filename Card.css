@@ -17,8 +17,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: var(--height);
-    
+    height: var(--height);  
+}
+img{
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;/* I learnt that this just pushes the image behind everything so it acts like a background its nice */
 }
 h3 > i  {
     color: var(--icon);
